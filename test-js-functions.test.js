@@ -1,13 +1,5 @@
+const { getEvenNumber, convertKM2M } = require('./main');
 
-function getEvenNumber(begin, end) {
-	let res = [];
-	for (let i = begin; i <= end; i++) {
-		if (i % 2 === 0) {
-			res.push(i);
-		}	
-	}
-	return res;
-}
 test('Should print even numbers', () => {
 	let evenNums = getEvenNumber(0, 10);
 	for (let item of evenNums) {
@@ -15,6 +7,11 @@ test('Should print even numbers', () => {
 		expect(res).toBe(true);
 	}
 	
+})
+
+test('Should convert km to m', () => {
+	let res = convertKM2M(10);
+	expect(res).toBe(10000);
 })
 
 
